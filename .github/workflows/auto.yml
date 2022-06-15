@@ -1,0 +1,32 @@
+name: CI
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+  schedule:
+    - cron: '*/5 * * * *'
+  pull_request:
+    branches: [ main ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: first commit
+        run: sed -i '$ d' auto
+      - name: second commit
+        run: |
+          git add .
+          git config user.name 'CRSXon'
+          git config user.email 'crackerhacker720@gmail.com'
+          git commit -m "automatic"
+          git push 
+      - name: third commit
+        run: date >> auto
+      - name: finishing
+        run: |
+          git add .
+          git config user.name 'CRSXon'
+          git config user.email 'crackerhacker720@gmail.com'
+          git commit -m "automatic"
+          git push 
