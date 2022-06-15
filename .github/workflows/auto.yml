@@ -17,14 +17,12 @@ jobs:
       - name: second commit
         run: |
           git add .
-          git config user.name 'CRSXon'
-          git config user.email 'crackerhacker720@gmail.com'
-          git commit -m "automatic"
+          git commit -m "automatic" -m "automatic
           git push 
       - name: third commit
         run: date >> auto
       - name: finishing
         run: |
           git add .
-          git commit -m "automatic"
+          git commit -m "automatic" -m "automatic
           git push 
