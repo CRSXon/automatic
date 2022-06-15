@@ -17,12 +17,12 @@ jobs:
       - name: second commit
         run: |
           git add .
-          git commit -m "automatic" -m "automatic
+          git commit -m "automatic" -m "automatic"
           git push 
       - name: third commit
         run: date >> auto
       - name: finishing
         run: |
           git add .
-          git commit -m "automatic" -m "automatic
+          git commit -m "automatic" -m "automatic"
           git push 
