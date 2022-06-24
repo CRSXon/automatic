@@ -1,12 +1,10 @@
 name: automatic
 on:
   push:
-    branches: [ main ]
   workflow_dispatch:
   schedule:
     - cron: '*/5 * * * *'
   pull_request:
-    branches: [ main ]
 jobs:
   build:
     runs-on: ubuntu-latest
